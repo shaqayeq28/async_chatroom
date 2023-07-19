@@ -20,8 +20,10 @@ def signup(request):
 
             login(request, user)
 
-            return redirect('frontpage')
+            return redirect('home')
     else:
         form = SignUpForm()
 
-    return render(request, 'core/signup.html', {'form': form})
+    return render(request, 'core/signup.html', context={'form': form})
+
+
